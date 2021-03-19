@@ -9,7 +9,7 @@ const AboutView = () => {
         <div className="row">
           <div className="col-lg-8 offset-lg-2 my-5">
             <p className="lead">
-            Movie Browser is a very simple application that allows you to browse, search, watch movie trailers, read synopsis, and see rating for your favorite movies. 
+            Movie Browser is a very simple application that allows you to browse, search, watch movie trailers, read synopses, and view ratings for all your favorite movies. 
             <br /><br/>
             Built with React, Bootstrap & TMDb API.
             </p>
