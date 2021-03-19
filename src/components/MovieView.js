@@ -31,7 +31,16 @@ const MovieView = () => {
 
     function renderMovieDetails() {
         let movieTrailerURL;
-
+        let allGenres
+        // .map((obj, i) => {
+        //     return console.log(genres)
+        // })
+        if (movieDetails.genres) {
+            allGenres = movieDetails.genres.map((obj, i) => {
+                return <li>{obj.name}</li>
+            })
+        }
+        
         if (trailerURL) {
             movieTrailerURL = `https://www.youtube.com/watch?v=${trailerURL.key}`
         }
@@ -68,6 +77,13 @@ const MovieView = () => {
                                     <p>Release Date: {movieDetails.release_date}</p>
                                     <p>Vote Average: {movieDetails.vote_average}</p>
                                     <p>No. of Votes: {movieDetails.vote_count}</p>
+                                    <p>Genres:</p>
+                                    <ul>
+                                    {
+                                            allGenres &&
+                                            allGenres
+                                        }
+                                    </ul>
                                     <div className="player-wrapper">
                                         {
                                             movieTrailerURL &&

@@ -49,6 +49,12 @@
   left: 0;
 }
 
+ul {
+  padding-left: 1rem;
+  margin-top: -10px;
+  list-style-type: circle;
+}
+
 @media (max-width: 576px) {
   .col-lg-3 {
     display: flex;
@@ -62,4 +68,21 @@
   .card {
     width: 20rem !important;
   }
+
+  .hero-text {
+    font-size: 1.7rem;
+  }
+
+  .movie-hero-text {
+    font-size: 3rem;
+  }
+
+  .unavailable {
+    padding: 2rem;
+  }
+
+  .about {
+    padding: 0rem 2rem;
+  }
 }
+

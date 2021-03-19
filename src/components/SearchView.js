@@ -18,7 +18,7 @@ const SearchView = ({ keyword, searchResults }) => {
             {searchResults.length === 0 ?
                 <div className="container my-5">
                     <div className="row">
-                        <p className="lead">No results available</p>
+                        <p className="lead unavailable">No results available</p>
                     </div>
                 </div>
                 : <div className="container">

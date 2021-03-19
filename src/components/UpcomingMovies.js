@@ -26,7 +26,7 @@ const GetUpcomingMovies = () => {
         <div className="row">
           {
             isLoading ?
-              <p className="lead my-5">Loading...</p>
+              <p className="lead my-5 unavailable">Loading...</p>
               : resultsHTML
           }
         </div>
