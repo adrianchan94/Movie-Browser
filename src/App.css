@@ -20,7 +20,7 @@
     font-size: 4rem;
     position: absolute;
     bottom: 10px;
-    font-weight: 120;
+    font-weight: 150;
     z-index: 200;
 }
 
@@ -83,5 +83,6 @@
   .about {
     padding: 0rem 2rem;
   }
+
 }
 

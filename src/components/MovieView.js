@@ -2,6 +2,7 @@ import { useState, useEffect, React } from 'react'
 import Hero from './Hero'
 import { useParams } from 'react-router-dom'
 import ReactPlayer from "react-player"
+import StarRatings from 'react-star-ratings';
 
 const MovieView = () => {
     const { id } = useParams()
@@ -66,17 +67,31 @@ const MovieView = () => {
                         <div className="row">
                             <div className="col-md-3 bg-dark py-3">
                                 <img src={posterPath} alt="..." className="img-fluid shadow rounded" />
+                                <div className="container">
+                                    {
+                                        movieDetails.tagline &&
+                                        <p className="lead py-4 text-white text-center">"<i>{movieDetails.tagline}</i>"</p>
+                                    }
+                                </div>
                             </div>
                             <div className="col-md-9 py-4">
                                 <div className="container">
 
                                     <h2>{movieDetails.original_title}</h2>
                                     <p className="lead py-2"><i>{movieDetails.overview}</i></p>
+                                    <h6><u>Runtime</u></h6>
+                                    <p>{movieDetails.runtime} min.</p>
                                     <h6><u>Release Date</u></h6>
                                     <p>{movieDetails.release_date}</p>
                                     <h6><u>Vote Average</u></h6>
-                                    <p>{movieDetails.vote_average}</p>
-                                    <h6><u>Number of Votes</u></h6>
+                                    <StarRatings
+                                        rating={movieDetails.vote_average}
+                                        starRatedColor="gold"
+                                        starDimension="17px"
+                                        numberOfStars={10}
+                                        name='rating'
+                                    />
+                                    <h6 className="pt-3"><u>Number of Votes</u></h6>
                                     <p>{movieDetails.vote_count}</p>
                                     <h6><u>Genres:</u></h6>
                                     <ul className="genres">
