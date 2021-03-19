@@ -4,7 +4,7 @@ import MovieCard from './MovieCard'
 
 //TMdb API KEY = 17d4a2274a993dc278559c3122a5c7b1
 
-const SearchView = ({ keyword, searchResults}) => {
+const SearchView = ({ keyword, searchResults }) => {
     const title = `You are searching for ${keyword}`
     console.log(searchResults, "are the search results")
 
@@ -13,8 +13,8 @@ const SearchView = ({ keyword, searchResults}) => {
     })
 
     return (
-        <>  
-                <Hero text={title} />
+        <>
+            <Hero text={title} />
             {searchResults.length === 0 ?
                 <div className="container my-5">
                     <div className="row">
