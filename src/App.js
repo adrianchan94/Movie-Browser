@@ -3,7 +3,7 @@ import Navbar from './components/Navbar'
 import Home from './components/Home'
 import AboutView from './components/AboutView'
 import SearchView from './components/SearchView'
-import { HashRouter, Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import MovieView from './components/MovieView'
 import NotFound from './components/NotFound'
 import UpcomingMovies from './components/UpcomingMovies'
@@ -29,7 +29,6 @@ function App() {
   return (
     <div>
       <Navbar searchText={searchText} setSearchText={setSearchText}/>
-      <HashRouter>
 
       <Switch>
         <Route path="/" exact>
@@ -43,7 +42,6 @@ function App() {
         <Route path="/upcoming" component={UpcomingMovies} />
         <Route component={NotFound}/>
       </Switch>
-      </HashRouter>
     </div>
   );
 }
