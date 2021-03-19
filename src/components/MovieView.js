@@ -72,10 +72,13 @@ const MovieView = () => {
 
                                     <h2>{movieDetails.original_title}</h2>
                                     <p className="lead py-2"><i>{movieDetails.overview}</i></p>
-                                    <p>Release Date: {movieDetails.release_date}</p>
-                                    <p>Vote Average: {movieDetails.vote_average}</p>
-                                    <p>No. of Votes: {movieDetails.vote_count}</p>
-                                    <p>Genres:</p>
+                                    <h6><u>Release Date</u></h6>
+                                    <p>{movieDetails.release_date}</p>
+                                    <h6><u>Vote Average</u></h6>
+                                    <p>{movieDetails.vote_average}</p>
+                                    <h6><u>Number of Votes</u></h6>
+                                    <p>{movieDetails.vote_count}</p>
+                                    <h6><u>Genres:</u></h6>
                                     <ul className="genres">
                                         {
                                             allGenres &&
