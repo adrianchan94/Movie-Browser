@@ -32,15 +32,13 @@ const MovieView = () => {
     function renderMovieDetails() {
         let movieTrailerURL;
         let allGenres
-        // .map((obj, i) => {
-        //     return console.log(genres)
-        // })
+
         if (movieDetails.genres) {
             allGenres = movieDetails.genres.map((obj, i) => {
                 return <li>{obj.name}</li>
             })
         }
-        
+
         if (trailerURL) {
             movieTrailerURL = `https://www.youtube.com/watch?v=${trailerURL.key}`
         }
@@ -66,7 +64,7 @@ const MovieView = () => {
                     <Hero movieView={true} text={movieDetails.original_title} backdrop={backdropURL} />
                     <div className="container my-5">
                         <div className="row">
-                            <div className="col-md-3 bg-dark py-2">
+                            <div className="col-md-3 bg-dark py-3">
                                 <img src={posterPath} alt="..." className="img-fluid shadow rounded" />
                             </div>
                             <div className="col-md-9 py-4">
@@ -78,8 +76,8 @@ const MovieView = () => {
                                     <p>Vote Average: {movieDetails.vote_average}</p>
                                     <p>No. of Votes: {movieDetails.vote_count}</p>
                                     <p>Genres:</p>
-                                    <ul>
-                                    {
+                                    <ul className="genres">
+                                        {
                                             allGenres &&
                                             allGenres
                                         }
@@ -98,6 +96,7 @@ const MovieView = () => {
                             </div>
                         </div>
                     </div>
+
                 </>
             )
         }

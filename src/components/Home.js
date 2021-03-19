@@ -1,10 +1,10 @@
-import { useEffect, useState, React } from 'react'
+import { useEffect, useState, React} from 'react'
 import Hero from './Hero'
 import MovieCard from './MovieCard'
 
 const TrendingMovies = () => {
   const [trendingMovies, setTrendingMovies] = useState([])
-  const [isLoading, setIsLoading] = useState(true)
+  const [ isLoading, setIsLoading ] = useState(true)
 
 
   useEffect(() => {
@@ -41,12 +41,12 @@ const TrendingMovies = () => {
 
 const Home = () => {
 
-  return (
-    <>
-      <Hero text="Trending Movies" />
+    return(
+      <>
+      <Hero text="Trending Movies"/>
       <TrendingMovies />
-    </>
-  )
-}
+      </>
+    )
+  }
 
 export default Home;

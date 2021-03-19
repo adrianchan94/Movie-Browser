@@ -1,17 +1,17 @@
-import { useState, useEffect, React } from 'react'
+import { useState, useEffect, React} from 'react'
 import Hero from './Hero'
 import MovieCard from './MovieCard'
 
 const GetUpcomingMovies = () => {
-  const [upcomingMovies, setUpcomingMovies] = useState([]);
-  const [isLoading, setIsLoading] = useState(true)
+    const [upcomingMovies, setUpcomingMovies] = useState([]);
+    const [isLoading, setIsLoading] = useState(true)
 
-  useEffect(() => {
-    fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=17d4a2274a993dc278559c3122a5c7b1&language=en-US&page=1')
+    useEffect(() => {
+      fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=17d4a2274a993dc278559c3122a5c7b1&language=en-US&page=1')
       .then(response => response.json())
       .then(data => {
-        setUpcomingMovies(data.results)
-        setIsLoading(false)
+      setUpcomingMovies(data.results)
+      setIsLoading(false)
       })
   }, [upcomingMovies])
 
@@ -46,6 +46,6 @@ const UpcomingMovies = () => {
     </>
   )
 }
-
+  
 export default UpcomingMovies;
 

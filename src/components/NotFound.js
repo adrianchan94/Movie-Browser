@@ -7,13 +7,13 @@ const NotFound = () => (
     <Hero text="Error 404" />
     <div className="container">
       <div className="row">
-        <div className="col-lg-10 my-5">
+        <div className="col-lg-10 my-5 unavailable">
           <p className="lead">
             Sorry this page does not exist
             </p>
           <Link to="/">
             Go Home
-    </Link>
+          </Link>
         </div>
       </div>
     </div>

@@ -11,9 +11,9 @@ const AboutView = () => {
             <p className="lead">
             Movie Browser is a very simple application that allows you to browse, search, watch movie trailers, read synopsis, and see rating for your favorite movies. 
             <br /><br/>
-            Built with React, Bootstrap & TMDb API. 
+            Built with React, Bootstrap & TMDb API.
             </p>
-            <small>Copyright (c) 2021 Adrian Chan</small>
+            <small>Copyright © 2021 Adrian Chan</small>
           </div>
         </div>
       </div>
