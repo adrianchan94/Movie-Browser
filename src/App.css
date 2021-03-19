@@ -1,6 +1,11 @@
+
 .hero-container {
     position: relative; 
     z-index: 100;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),url(./images/cinema.jpg);
+    background-position: center;
+    background-size: cover;
+    opacity: 120%;
 }
 
 .tall-hero-container {
