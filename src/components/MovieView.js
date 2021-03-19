@@ -65,7 +65,7 @@ const MovieView = () => {
                     <Hero movieView={true} text={movieDetails.original_title} backdrop={backdropURL} />
                     <div className="container my-5">
                         <div className="row">
-                            <div className="col-md-3 bg-dark py-3">
+                            <div className="col-md-3 bg-dark py-3 poster">
                                 <img src={posterPath} alt="..." className="img-fluid shadow rounded" />
                                 <div className="container">
                                     {

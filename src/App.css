@@ -86,6 +86,10 @@
   .about {
     padding: 0rem 2rem;
   }
+  
+  .poster {
+    margin-top: -3rem;
+  }
 
 }
 
