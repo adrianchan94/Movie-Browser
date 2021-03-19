@@ -8,7 +8,7 @@ const MovieCard = ({ movie}) => {
 
     return (
         <div className="col-lg-3 col-md-6 col-sm-12 my-4">
-            <div className="card" style={{ width: "16rem" }}>
+            <div className="card shadow" style={{ width: "16rem" }}>
                 {movie.poster_path ?
                     <img className="card-img-top" src={posterURL} alt={movie.original_title} />
                     : <img className="card-img-top" src={unavailablePoster} alt={movie.original_title} />
